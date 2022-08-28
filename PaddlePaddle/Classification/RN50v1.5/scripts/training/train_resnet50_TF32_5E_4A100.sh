@@ -12,9 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-python -m paddle.distributed.launch --gpus=0,1,2,3,4,5,6,7 train.py \
-    --epochs 90 \
-    --amp \
-    --scale-loss 128.0 \
-    --use-dynamic-loss-scaling \
-    --data-layout NHWC
+python -m paddle.distributed.launch --gpus=0,1,2,3 train.py --epochs 5
